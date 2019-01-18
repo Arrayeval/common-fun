@@ -1,5 +1,4 @@
  ## 使用方式： 
-
 ```
 npm i common-fun --save
 ```
