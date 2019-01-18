@@ -13,5 +13,8 @@
   ],
   "author": "Arrayeval",
   "license": "MIT",
-  "git repository": "https://github.com/Arrayeval/common-fun"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Arrayeval/common-fun"
+  }
 }
