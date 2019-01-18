@@ -3,7 +3,7 @@
 common-fun 是一个公共函数库，由自己编写testEmail，testPhone，testPhoneFix，addClass，IsPC，setCookie，getCookie，delCookie，numFix，isNumber，selfDateFormat....
 
 
- 发包的简易流程：
+ <!-- 发包的简易流程：
 
 https://www.jianshu.com/p/ea64fd01679c
 
@@ -39,4 +39,4 @@ npm publish error: 403. You do not have permission to publish 'project name'：�
 
    npm version   <update_type>
 
-   npm publish 
+   npm publish  -->
