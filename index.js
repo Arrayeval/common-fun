@@ -402,7 +402,7 @@ export function touchMoveElement (el) {
   })
 }
 
-// 数组或者对象的clone 
+// 数组或者对象的深度clone 
 export function clone (value) {
   if (Array.isArray(value)) {
     return value.map(clone)
@@ -415,4 +415,32 @@ export function clone (value) {
   } else {
     return value
   }
+}
+
+export function cloneData (data) {
+  if (Object.prototype.toString.call(data) === "[object Array]") {
+    var _arr = [];
+    for (let item of data) {
+      _arr.push(cloneData(item))
+    }
+    return _arr;
+  }
+  if (Object.prototype.toString.call(data) === "[object Object]") {
+    var _obj = {};
+    for (let item in data) {
+      _obj[item] = cloneData(data[item])
+    }
+    return _obj;
+  }
+  return data;
+}
+export function deepCopy (obj) {
+  if (typeof obj !== 'object') return;
+  var newObj = obj instanceof Array ? [] : {};
+  for (var key in obj) {
+      if (obj.hasOwnProperty(key)) {
+          newObj[key] = typeof obj[key] === 'object' ? deepCopy(obj[key]) : obj[key];
+      }
+  }
+  return newObj;
 }
